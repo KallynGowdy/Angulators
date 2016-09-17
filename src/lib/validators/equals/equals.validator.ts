@@ -11,12 +11,24 @@ export function equals(form: () => FormGroup, controlName: string, prefix: strin
   return (otherControl: AbstractControl): { [key: string]: any } => {
     const f = form();
     if (f) {
-      const expected = f.get(controlName).value;
-      const value = otherControl.value;
-      const equal = expected === value;
+      const expected = f.get(controlName);
+      const equal = areControlValuesEqual(expected, otherControl);
       const key = prefix + controlName;
-      return !equal ? {[key]: value} : null;
+      return !equal ? {[key]: otherControl.value} : null;
     }
     return null;
   };
+}
+
+/**
+ * Determines if the two given controls contain equal values.
+ * @param first The first control.
+ * @param second The second control.
+ * @returns boolean
+ */
+export function areControlValuesEqual(first: AbstractControl, second: AbstractControl): boolean {
+  const expected = first.value;
+  const other = second.value;
+  const equal = expected === other;
+  return equal;
 }
