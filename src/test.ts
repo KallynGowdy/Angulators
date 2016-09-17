@@ -1,5 +1,6 @@
-import './polyfills.ts';
+/// <reference path="./typings.d.ts"/>
 
+import './polyfills.ts';
 import 'zone.js/dist/long-stack-trace-zone';
 import 'zone.js/dist/proxy.js';
 import 'zone.js/dist/sync-test';
@@ -13,7 +14,6 @@ declare var require: any;
 
 // Prevent Karma from running prematurely.
 __karma__.loaded = function () {};
-
 
 Promise.all([
   System.import('@angular/core/testing'),

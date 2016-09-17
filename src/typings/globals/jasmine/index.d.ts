@@ -71,7 +71,7 @@ declare namespace jasmine {
     // taken from TypeScript lib.core.es6.d.ts, applicable to CustomMatchers.contains()
     interface ArrayLike<T> {
         length: number;
-        [n: number]: T;
+        //[n: number]: T;
     }
 
     interface ArrayContaining {
@@ -125,7 +125,7 @@ declare namespace jasmine {
     }
 
     interface CustomMatcherFactories {
-        [index: string]: CustomMatcherFactory;
+        //[index: string]: CustomMatcherFactory;
     }
 
     interface CustomMatcherResult {

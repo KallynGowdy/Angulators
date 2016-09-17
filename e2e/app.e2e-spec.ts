@@ -1,5 +1,6 @@
-import { AngulatorsPage } from './app.po';
+/// <reference path="../src/typings/index.d.ts" />
 
+import { AngulatorsPage } from './app.po';
 describe('angulators App', function() {
   let page: AngulatorsPage;
 
