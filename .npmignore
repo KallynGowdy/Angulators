@@ -3,5 +3,4 @@ karma.conf.js
 protractor.conf.js
 tslint.json
 coverage/
-src/
 e2e/
