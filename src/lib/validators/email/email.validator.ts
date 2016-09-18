@@ -4,7 +4,7 @@ import { ValidatorFn, AbstractControl } from '@angular/forms';
  * Creates a validator that is able to validate emails.
  * @param name The name of the property that the invalid email should be set to in the returned object.
  */
-export function email(name: string = 'email'): ValidatorFn {
+export function email(name = 'email'): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } => {
         const email = control.value;
         const valid = isValidEmail(email);
