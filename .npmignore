@@ -1,6 +1,7 @@
 angular-cli.json
 karma.conf.js
 protractor.conf.js
+webpack.config.js
 tslint.json
 coverage/
 e2e/
